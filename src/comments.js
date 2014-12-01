@@ -219,7 +219,8 @@ angular.module('ui.comments.directive', [])
     replace: true,
     templateUrl: function() { return commentsConfig.containerTemplate; },
     scope: {
-      'comments': '=commentData'
+      'comments': '=commentData',
+      'readonly': '='
     },
     controller: function() {},
     link: {
@@ -313,7 +314,8 @@ angular.module('ui.comments.directive', [])
     replace: true,
     templateUrl: function() { return commentsConfig.commentTemplate; },
     scope: {
-      comment: '=commentData'
+      comment: '=commentData',
+      readonly: '='
     },
     controller: function($scope) {},
     link: function(scope, elem, attr, ctrls) {
@@ -338,7 +340,7 @@ angular.module('ui.comments.directive', [])
       }
       var children = false, compiled,
           sub = $compile('<div comments child-comments="true" ' +
-                         'comment-data="comment.children"></div>'),
+                         'comment-data="comment.children" readonly="readonly"></div>'),
           transclude;
       // Notify controller without bubbling
       function notify(scope, name, data) {

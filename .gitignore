@@ -2,6 +2,6 @@
 .DS_Store
 .grunt
 /node_modules
-/dist
+/dist/docs
 *-SNAPSHOT*
 /bower_components

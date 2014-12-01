@@ -47,7 +47,7 @@ module.exports = function(grunt) {
           banner: '<%= meta.all %>\n<%= meta.tplmodules %>\n'
         },
         src: [], // src filled in by build task
-        dest: '<%= dist %>/<%= filename %>-<%= pkg.version %>.js'
+        dest: '<%= dist %>/<%= filename %>.js'
       }
     },
     copy: {
@@ -139,8 +139,8 @@ module.exports = function(grunt) {
           },
         },
         files: {
-          '<%= dist %>/<%= filename %>-<%= pkg.version %>.min.js':
-          '<%= dist %>/<%= filename %>-<%= pkg.version %>.js'
+          '<%= dist %>/<%= filename %>.min.js':
+          '<%= dist %>/<%= filename %>.js'
         }
       }
     },
@@ -252,8 +252,8 @@ module.exports = function(grunt) {
     },
     ngmin: {
       lib: {
-        src: ['<%= dist %>/ui-comments-<%= pkg.version %>.js'],
-        dest: '<%= dist %>/ui-comments-<%= pkg.version %>.js'
+        src: ['<%= dist %>/ui-comments.js'],
+        dest: '<%= dist %>/ui-comments.js'
       }
     },
     ngdocs: {
